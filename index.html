@@ -3,33 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harsha Nayaka | Portfolio</title>
+
+<title>Harsha Nayaka | AI Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg,#020617,#0f172a);
-  color: white;
+  color: #e2e8f0;
+  scroll-behavior: smooth;
 }
 
 header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 80px 20px;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 50px;
   background: linear-gradient(90deg,#38bdf8,#818cf8);
   -webkit-background-clip: text;
   color: transparent;
 }
 
+.subtitle {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
 .btn {
-  padding: 12px 25px;
+  padding: 12px 28px;
   margin: 10px;
   border-radius: 30px;
-  background: #38bdf8;
+  background: linear-gradient(90deg,#38bdf8,#818cf8);
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -41,29 +54,66 @@ h1 {
 }
 
 .section {
-  padding: 60px 20px;
-  max-width: 1000px;
+  padding: 80px 20px;
+  max-width: 1100px;
   margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #38bdf8;
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
 }
 
 .card {
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  padding: 20px;
+  backdrop-filter: blur(12px);
+  padding: 25px;
   border-radius: 15px;
-  transition: 0.3s;
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.03);
 }
 
+.card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg,transparent,#38bdf8,transparent);
+  top: -50%;
+  left: -50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  opacity: 0.2;
+}
+
+.skills span {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 15px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+}
 </style>
 </head>
 
@@ -71,8 +121,8 @@ h1 {
 
 <header>
   <h1>Harsha Nayaka</h1>
-  <p>🚀 Software Developer | Python | AI/ML</p>
-  <p>I build intelligent systems & real-world applications</p>
+  <p class="subtitle">🚀 AI Developer | Python | Machine Learning</p>
+  <p>I build intelligent systems that solve real-world problems</p>
 
   <a href="#projects" class="btn">View Work</a>
   <a href="Harsha_ATS_Resume.pdf" class="btn">Resume</a>
@@ -80,33 +130,46 @@ h1 {
 
 <div class="section">
   <h2>About Me</h2>
-  <p>
-    Passionate developer focused on AI, ML, and scalable applications.
-    I enjoy solving real-world problems with technology.
+  <p style="text-align:center; max-width:700px; margin:auto;">
+    Passionate developer specializing in AI, Machine Learning, and scalable systems.
+    I focus on building impactful applications with real-world use cases.
   </p>
 </div>
 
 <div class="section">
+  <h2>Skills</h2>
+  <div class="skills" style="text-align:center;">
+    <span>Python</span>
+    <span>Java</span>
+    <span>Machine Learning</span>
+    <span>OpenCV</span>
+    <span>TensorFlow</span>
+    <span>SQL</span>
+    <span>Git</span>
+  </div>
+</div>
+
+<div class="section" id="projects">
   <h2>Projects</h2>
 
   <div class="projects">
 
     <div class="card">
       <h3>Hand Gesture Mouse</h3>
-      <p>Control your system using AI hand tracking.</p>
-      <a href="#">GitHub</a>
+      <p>Control systems using AI hand tracking (OpenCV + MediaPipe).</p>
+      <a href="#">View Code</a>
     </div>
 
     <div class="card">
       <h3>Signature Verification</h3>
-      <p>Detect fake signatures using ML.</p>
-      <a href="#">GitHub</a>
+      <p>ML-based system to detect forged signatures.</p>
+      <a href="#">View Code</a>
     </div>
 
     <div class="card">
-      <h3>Intrusion Detection</h3>
-      <p>Cloud security system with honeypot.</p>
-      <a href="#">GitHub</a>
+      <h3>Intrusion Detection System</h3>
+      <p>Cloud security system using IDS + Honeypot.</p>
+      <a href="#">View Code</a>
     </div>
 
   </div>
@@ -114,8 +177,15 @@ h1 {
 
 <div class="section">
   <h2>Contact</h2>
-  <p>Email: harshanayakak91@gmail.com</p>
+  <p style="text-align:center;">
+    📧 harshanayakak91@gmail.com <br>
+    🔗 <a href="https://www.linkedin.com/in/harsha-nayaka-k-417401281/" style="color:#38bdf8;">LinkedIn</a>
+  </p>
 </div>
+
+<footer>
+  <p>© 2026 Harsha Nayaka</p>
+</footer>
 
 </body>
 </html>
