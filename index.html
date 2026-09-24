@@ -1,147 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Harsha Nayaka | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsha Nayaka | Portfolio</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#020617,#0f172a);
+  color: white;
+}
 
-    body {
-      background: #0f172a;
-      color: #f1f5f9;
-      line-height: 1.6;
-    }
+header {
+  text-align: center;
+  padding: 80px 20px;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-    }
+h1 {
+  font-size: 48px;
+  background: linear-gradient(90deg,#38bdf8,#818cf8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-    header h1 {
-      font-size: 40px;
-      color: #38bdf8;
-    }
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    header p {
-      margin: 10px 0;
-      font-size: 18px;
-    }
+.btn:hover {
+  transform: scale(1.1);
+}
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #38bdf8;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
 
-    h2 {
-      margin-bottom: 20px;
-      color: #38bdf8;
-    }
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
 
-    .projects {
-      display: grid;
-      gap: 20px;
-    }
+.card:hover {
+  transform: translateY(-10px);
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      margin-top: 40px;
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Harsha Nayaka K</h1>
-  <p>Software Developer | Python | AI/ML</p>
-  <p>Building real-world intelligent systems</p>
+  <h1>Harsha Nayaka</h1>
+  <p>🚀 Software Developer | Python | AI/ML</p>
+  <p>I build intelligent systems & real-world applications</p>
 
-  <a href="#projects" class="btn">View Projects</a>
-  <a href="Harsha_ATS_Resume.pdf" class="btn">Download Resume</a>
+  <a href="#projects" class="btn">View Work</a>
+  <a href="Harsha_ATS_Resume.pdf" class="btn">Resume</a>
 </header>
 
-<section>
+<div class="section">
   <h2>About Me</h2>
   <p>
-    I am a passionate Software Developer with strong skills in Python, AI/ML, and Full-Stack Development.
-    I enjoy solving real-world problems and building scalable applications.
+    Passionate developer focused on AI, ML, and scalable applications.
+    I enjoy solving real-world problems with technology.
   </p>
-</section>
+</div>
 
-<section>
-  <h2>Skills</h2>
-  <p><b>Languages:</b> Python, Java, C++</p>
-  <p><b>Tools:</b> Git, Tableau, Power BI</p>
-  <p><b>Domains:</b> AI, Machine Learning, Web Development</p>
-</section>
-
-<section id="projects">
+<div class="section">
   <h2>Projects</h2>
 
   <div class="projects">
 
     <div class="card">
-      <h3>Hand Gesture Virtual Mouse</h3>
-      <p>Control your computer using hand gestures with OpenCV & MediaPipe.</p>
-      <a href="#" class="btn">View Code</a>
+      <h3>Hand Gesture Mouse</h3>
+      <p>Control your system using AI hand tracking.</p>
+      <a href="#">GitHub</a>
     </div>
 
     <div class="card">
-      <h3>Signature Verification System</h3>
-      <p>AI-based system to detect forged signatures using machine learning.</p>
-      <a href="#" class="btn">View Code</a>
+      <h3>Signature Verification</h3>
+      <p>Detect fake signatures using ML.</p>
+      <a href="#">GitHub</a>
     </div>
 
     <div class="card">
-      <h3>Intrusion Detection System</h3>
-      <p>Cloud-based IDS with honeypot for real-time cyber threat detection.</p>
-      <a href="#" class="btn">View Code</a>
+      <h3>Intrusion Detection</h3>
+      <p>Cloud security system with honeypot.</p>
+      <a href="#">GitHub</a>
     </div>
 
   </div>
-</section>
+</div>
 
-<section>
+<div class="section">
   <h2>Contact</h2>
   <p>Email: harshanayakak91@gmail.com</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/harsha-nayaka-k-417401281/" style="color:#38bdf8;">Profile</a></p>
-  <p>GitHub: <a href="#" style="color:#38bdf8;">Your GitHub</a></p>
-</section>
-
-<footer>
-  <p>© 2026 Harsha Nayaka K</p>
-</footer>
+</div>
 
 </body>
 </html>
